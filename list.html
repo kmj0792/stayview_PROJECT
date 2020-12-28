@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+<title>STAY VIEW</title>
+<style>
+
+    h4{text-indent: 25em;}
+ #topMenu {
+      height:100 px; /* 메인 메뉴의 높이 */ width: 2000px; /* 메인 메뉴의 넓이 */
+      position: fixed;
+      text-align: left;
+      background-color: white; }
+ #topMenu ul { /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+    list-style-type: none; /* 메인 메뉴 안의 ul 내부의 목록 표시를 없애줌 */
+    margin: 0px; /* 메인 메뉴 안의 ul의 margin */ 
+    padding: 0px; /* 메인 메뉴 안의 ul의 padding을 없앰 */}
+     #topMenu ul li { /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+      color: white; /* 글씨 색을 흰색으로 설정 */
+       background-color: #8082d1; /* 배경 색을 RGB(2D2D2D)로 설정 */
+        float: left; /* 왼쪽으로 나열되도록 설정 */
+         line-height: 40px; /* 텍스트 한 줄의 높이를 설정 */
+          vertical-align: middle; /* 세로 정렬을 가운데로 설정 */
+           text-align: center; /* 텍스트를 가운데로 정렬 */
+            position: relative; /* 해당 li 태그 내부의 top/left 포지션 초기화 */ }
+             .menuLink, .submenuLink { /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+              text-decoration:none; /* a 태그의 꾸밈 효과 제거 */
+               display: block; /* a 태그의 클릭 범위를 넓힘 */
+                width: 370px; /* 기본 넓이를 설정 */
+                 font-size: 15px; /* 폰트 사이즈를 설정 */
+                  font-weight: bold; /* 폰트를 굵게 설정 */
+                   font-family: "hitchhike","배달의민족 주아"; /* 기본 폰트를 영어/한글 순서대로 설정 */
+                    } .menuLink { /* 상위 메뉴의 글씨색을 흰색으로 설정 */color: white; } .topMenuLi:hover .menuLink { /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+                      color: rgb(48, 48, 48); /* 글씨 색 */
+                       background-color: #b9b9b9; /* 배경색을 밝은 회색으로 설정 */
+                        } .submenuLink { /* 하위 메뉴의 a 태그 스타일 설정 */
+                         color: #2d2d2d; /* 글씨 색을 RGB(2D2D2D)로 설정 */
+                          background-color: white; /* 배경색을 흰색으로 설정 */
+                           border: solid 1px black; /* 테두리를 설정 */
+                            margin-top: -1px; /* 위 칸의 하단 테두리와 아래칸의 상단 테두리가 겹쳐지도록 설정 */
+                             } .longLink { /* 좀 더 긴 메뉴 스타일 설정 */
+                              width: 370px; /* 넓이 설정 */
+                               } .submenu { /* 하위 메뉴 스타일 설정 */
+                                position: absolute; /* html의 flow에 영향을 미치지 않게 absolute 설정 */
+                                 height: 0px; /* 초기 높이는 0px로 설정 */
+                                  overflow: hidden; /* 실 내용이 높이보다 커지면 해당 내용 감춤 */
+                                   transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(기본) */
+                                    -webkit-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 크롬/사파라ㅣ) */
+                                     -moz-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 파폭) */
+                                      -o-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 오페라) */
+                                       } .topMenuLi:hover .submenu { /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
+                                     height: 500px; /* 높이를 설정 */
+                                      } .submenuLink:hover { /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
+                                       color: rgb(38, 0, 255); /* 글씨색을 설정 */ 
+                                       background-color: #dddddd; /* 배경을 RGB(DDDDDD)로 설정 */ } </style>
+
+</head>
+<body> 
+  <center>
+    <style>
+                                                      .text_main {
+                                                         font-family: "HAMMOCK";
+                                                        font-weight: bold;
+                                                        color : rgb(0,0,0) ;
+                                                       font-size:x-large;
+                                                        
+                                                      
+                                                      }
+                                                    </style>
+
+                                       <nav id="topMenu" >
+                                        <div class="text_main"
+                                        <br>
+                                            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STAY VIEW</h1>
+                                          </div>
+                                             <ul> <li class="topMenuLi">
+                                                   <a class="menuLink">SEOWON 서원구</a>
+                                                    <ul class="submenu"> 
+                                                         <li><a href="#사창동" class="submenuLink longLink">사창동</a></li>
+                                                         <li><a href="#모충동" class="submenuLink longLink">모충동</a></li>
+                                                         <li><a href="#산남동" class="submenuLink longLink">산남동</a></li>
+                                                         <li><a href="#개신동" class="submenuLink longLink">개신동</a></li>
+                                                         <li><a href="#분평동" class="submenuLink longLink">분평동</a></li>
+                                                       </ul> </li> <li>|</li> 
+                                                       <li class="topMenuLi"> <a class="menuLink" href="#">SANGDANG 상당구</a>
+                                                            <ul class="submenu"> 
+                                                                 <li><a href="#금천동" class="submenuLink longLink">금천동</a></li>
+                                                         <li><a href="#북문로1가" class="submenuLink longLink">북문로1가</a></li>
+                                                         <li><a href="#산성동" class="submenuLink longLink">산성동</a></li>
+                                                         <li><a href="#성안동" class="submenuLink longLink">성안동</a></li>
+                                                         <li><a href="#용암동" class="submenuLink longLink">용암동</a></li>
+                                                               </ul>
+                                                        </li> <li>|</li>
+                                                         <li class="topMenuLi"> <a class="menuLink" href="#">CHEONGWON 청원구</a>
+                                                            <ul class="submenu"> 
+                                                                 <li><a href="#내덕동" class="submenuLink longLink">내덕동</a></li>
+                                                         <li><a href="#사천동" class="submenuLink longLink">사천동</a></li>
+                                                         <li><a href="#우암동" class="submenuLink longLink">우암동</a></li>
+                                                         <li><a href="#율량동" class="submenuLink longLink">율량동</a></li>
+                                                         <li><a href="#주성동" class="submenuLink longLink">주성동</a></li>
+                                                               </ul>  
+                                                            </li> <li>|</li>
+
+
+                                                             <li class="topMenuLi"> <a class="menuLink" href="#">HEUNGDEOK 흥덕구</a>
+                                                                 <ul class="submenu"> 
+                                                                      <li><a href="#가경동" class="submenuLink longLink">가경동</a></li>
+                                                         <li><a href="#복대동" class="submenuLink longLink">복대동</a></li>
+                                                         <li><a href="#봉명동" class="submenuLink longLink">봉명동</a></li>
+                                                         <li><a href="#비하동" class="submenuLink longLink">비하동</a></li>
+                                                         <li><a href="#송절동" class="submenuLink longLink">송절동</a></li>
+                                                                    </ul> 
+                                                            </li>
+                                                        </ul> </nav>
+
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                    <style>
+                                                      .text_gu1 {
+                                                        font-family: "배달의민족 주아";
+                                                       
+                                                        color : rgb(255,167,167) ;
+                                                        
+                                                        font-size:xx-large;
+                                                      
+                                                      }
+                                                      .text_gu2 {
+                                                          font-family: "배달의민족 주아";
+                                                       
+                                                        color : rgb(255,181,22) ;
+                                                       
+                                                        font-size:xx-large;
+                                                        
+
+
+                                                      }
+                                                      .text_gu3 {
+                                                          font-family: "배달의민족 주아";
+                                                        
+                                                        color : rgb(150,155,255) ;
+                                                        
+                                                        font-size:xx-large;
+                                                        
+
+
+                                                      }
+                                                      .text_gu4 {
+                                                          font-family: "배달의민족 주아";
+                                                      
+                                                        color : rgb(0,0,0) ;
+                                                       
+                                                        font-size:xx-large;
+                                                        
+
+
+                                                      }
+                                                      .text_dong1{
+                                                          font-family: "배달의민족 한나체 Pro";
+                                                        
+                                                        font-size:x-large;
+                                                        color : rgb(255,167,167) ;
+                                                        
+                                                        
+                                                      }
+                                                      .text_dong2{
+                                                          font-family:  "배달의민족 한나체 Pro";
+                                                        
+                                                       
+                                                        font-size:x-large;
+                                                        color : rgb(255,181,22) ;
+                                                        
+                                                        
+                                                      }
+                                                      .text_dong3{
+                                                          font-family:  "배달의민족 한나체 Pro";
+                                                    
+                                                        font-size:x-large;
+                                                        color : rgb(150,155,255) ;
+                                                       
+                                                        
+                                                      }
+                                                      .text_dong4{
+                                                          font-family:  "배달의민족 한나체 Pro";
+                                                    
+                                                       
+                                                        font-size:x-large;
+                                                        color : rgb(0,0,0) ;
+                                                        
+                                                        
+                                                      }
+                                                        
+                                                         </style>
+
+                                                        <div class="text_gu1"
+                                                          <br>
+                                                        <br>
+                                                        <h2>서원구</h2>
+                                                     </div>
+                                                        <p>
+                                                             <br>
+                                                             <div class="text_dong1"
+                                                            <br>
+                                                        <h3 id="사창동">사창동</h3> </div>
+
+                                                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lQ_JS66BflDwy4wXQf9l2b7vzS7tKwcE" width="1000" height="500">숙소명</iframe> 
+                                                        <!--IMAGE LINK건 파일 넣기 -->
+                                                        
+
+                                                        <p>
+                                                            <br>
+                                                            <div class="text_dong1"
+                                                            <br>
+                                                       <h3 id="모충동">모충동</h3> </div>
+
+                                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Ji_4YNV8PzY8LcfJo11mN7_CgeZ1u3tT" width="1000" height="500">숙소명</iframe></p>
+                                                      
+                                                       <p>
+                                                            <br>
+                                                              <div class="text_dong1"
+                                                            <br>
+                                                       <h3 id="산남동">산남동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1fGMAFfZqTsJYcJy-sBajue0SbKJSmDjJ"  width="1000" height="500">숙소명</iframe></p>
+
+                                                        <p>
+                                                            <br>
+                                                              <div class="text_dong1"
+                                                            <br>
+                                                        
+                                                       <h3 id="개신동">개신동</h3> </div>
+                                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EpSu-t0tjWEMZtM4C5s5scNSg4GdCK4j" width="1000" height="500">숙소명</iframe></p>
+
+                                                       <p>
+                                                            <br>
+                                                              <div class="text_dong1"
+                                                            <br>
+                                                       <h3 id="분평동">분평동</h3> </div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1KJ5wG-U73oQ8TmuLlejkaOUtUOUBVWct"  width="1000" height="500">숙소명</iframe></p>
+
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        
+
+                                                       <div class="text_gu2"
+                                                          <br> 
+                                                        <h2>상당구</h2>
+                                                     </div>
+                                                        <p>
+                                                             <br>
+                                                             <div class="text_dong2"
+                                                            <br>
+                                                        <h3 id="금천동">금천동</h3></div>
+                                                        <iframe src="https://www.google.com/maps/d/embed?mid=1i8wTOP7aRumkwLGhrqO_-GrurP8O-J11"  width="1000" height="500">숙소명</iframe> 
+                                                        <!--IMAGE LINK건 파일 넣기 -->
+                                                        
+
+                                                        <p>
+                                                            <br>
+                                                            <div class="text_dong2"
+                                                            <br>
+                                                       <h3 id="북문로1가">북문로1가</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1EPRHM55SsdlX6hd7nm7PWLnz1vbu20u1"  width="1000" height="500">숙소명</iframe></p>
+                                                      
+                                                       <p>
+                                                            <br>
+                                                            <div class="text_dong2"
+                                                            <br>
+                                                       <h3 id="산성동">산성동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1YVNnl0It8LdRgTdLBi9Eld4mlyKuVwsp"  width="1000" height="500">숙소명</iframe></p>
+
+                                                        <p>
+                                                            <br>
+                                                            <div class="text_dong2"
+                                                            <br>
+                                                       <h3 id="성안동">성안동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1oFlx1IyaWKXdPw2lnwHt_EheR_jv7KMt"  width="1000" height="500">숙소명</iframe></p>
+
+                                                       <p>
+                                                            <br>
+                                                            <div class="text_dong2"
+                                                            <br>
+                                                       <h3 id="용암동">용암동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1SV6InOb9KnH7WZm181zpzf-tvYGhVy3U"  width="1000" height="500">숙소명</iframe></p>
+                                                       <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+
+                                                       <div class="text_gu3"
+                                                          <br>
+                                                        <h2>청원구</h2>
+                                                     </div>
+                                                        <p>
+                                                             <br>
+                                                              <div class="text_dong3"
+                                                            <br>
+                                                        <h3 id="내덕동">내덕동</h3></div>
+                                                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1iHdTZl2ClB5I-p9HeFdbGYEgtIzXRDZq" width="1000" height="500">숙소명</iframe> 
+                                                        <!--IMAGE LINK건 파일 넣기 -->
+                                                        
+
+                                                        <p>
+                                                            <br>
+                                                             <div class="text_dong3"
+                                                            <br>
+                                                       <h3 id="사천동">사천동</h3></div>>
+                                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1cAD32gpd7sRaq3Sq7dFFLVSbBWw8xVe4" width="1000" height="500">숙소명</iframe></p>
+                                                      
+                                                       <p>
+                                                            <br>
+                                                             <div class="text_dong3"
+                                                            <br>
+                                                       <h3 id="우암동">우암동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1v9PSMIIb-gbRmE0FHpE1a1Uhctj_n4Wf" width="1000" height="500">숙소명</iframe></p>
+
+                                                        <p>
+                                                            <br>
+                                                             <div class="text_dong3"
+                                                            <br>
+                                                       <h3 id="율량동">율량동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UuTX8gVQYvr2O5H3jxJse3_PPRYMBk0h" width="1000" height="500">숙소명</iframe></p>
+
+                                                       <p>
+                                                            <br>
+                                                             <div class="text_dong3"
+                                                            <br>
+                                                       <h3 id="주성동">주성동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UuTX8gVQYvr2O5H3jxJse3_PPRYMBk0h" width="1000" height="500">숙소명</iframe></p>
+
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+
+                                                       <div class="text_gu4"
+                                                           <br>
+                                                        <h2>흥덕구</h2>
+                                                     </div>
+                                                        <p>
+                                                             <br>
+                                                              <div class="text_dong4"
+                                                            <br>
+                                                        <h3 id="가경동">가경동</h3></div>
+                                                        <iframe src="https://www.google.com/maps/d/embed?mid=1RQI1vte6l7SdiT9eIXhnzvJGZh3EuZPc"  width="1000" height="500">숙소명</iframe> 
+                                                        <!--IMAGE LINK건 파일 넣기 -->
+                                                        
+
+                                                        <p>
+                                                            <br>
+                                                             <div class="text_dong4"
+                                                            <br>
+                                                       <h3 id="복대동">복대동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1w9ZwCuDRwfukSOuxtcDW0HBB7VwDSkQY"  width="1000" height="500">숙소명</iframe></p>
+                                                      
+                                                       <p>
+                                                            <br>
+                                                             <div class="text_dong4"
+                                                            <br>
+                                                       <h3 id="봉명동">봉명동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1U__rP1CVNptvc69r1PdTvwFlxC0JOT7b"  width="1000" height="500">숙소명</iframe></p>
+
+                                                        <p>
+                                                            <br>
+                                                             <div class="text_dong4"
+                                                            <br>
+                                                       <h3 id="비하동">비하동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1dRmVGERcYE6G_Og3kszDJInYIAYWqoTd"  width="1000" height="500">숙소명</iframe></p>
+
+                                                       <p>
+                                                            <br>
+                                                             <div class="text_dong4"
+                                                            <br>
+                                                       <h3 id="송절동">송절동</h3></div>
+                                                       <iframe src="https://www.google.com/maps/d/embed?mid=1QOP-MF_nFwcCi_goqg_gv1BoUyhBujqg"  width="1000" height="500">숙소명</iframe></p>
+
+
+
+                                       
+</p>
+</p>
+</p>
+</p></center>
+</body>

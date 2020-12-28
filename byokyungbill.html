@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>은하수빌라</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+
+        height: 460px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "circle",
+        "author": "S.P.C",
+        "sceneFadeDuration": 1000
+    },
+// 만약 버튼을 두개 이상 하고싶다면 hotspots []안에 배열처럼 {}추가하기 쉼표(,) 필수 
+    "scenes": {
+
+        "circle": {
+            "title": "Room1", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/Rwxv082.jpg",  //첫방 사진 링크 
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "out", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "entrance" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -40,
+                    "yaw":180,
+                    "type": "scene",
+                    "text": "living room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "room1_1" // 이 버튼을 통해 이동할 다음방 이름 
+                }      
+            ]
+        },
+
+        "room1_1": { //들어가서 첫번째 
+            "title": "Room1", 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 180,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/YaK9zL5.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 180,
+                    "type": "scene",
+                   // "text": "living room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "room1_2" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -20,
+                    "type": "scene",
+                   // "text": "living room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "circle" // 이 버튼을 통해 이동할 다음방 이름 
+                }      
+            ]
+        },
+
+        "room1_2": { //들어가서 중앙 
+            "title": "ROOM1", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/L00mIgG.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "room1_1" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 200,
+                    "type": "scene",
+                   // "text": "living room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "room1_3" // 이 버튼을 통해 이동할 다음방 이름 
+                }      
+            ]
+        },
+        
+        "room1_3": { //들어가서 창가 
+            "title": "ROOM1", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/l1fJlci.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 10,
+                    "type": "scene",
+                   // "text": "living room",
+                    "sceneId": "room1_2" 
+                }  
+            ]
+        },
+        "entrance": {
+            "title": "ENTRANCE",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/kuBmBZy.jpg",
+            "hotSpots": [
+                {
+                      "pitch": -30,
+                      "yaw": 80,
+                      "type": "scene",
+                      "text": "room2",
+                },
+      {
+                    "pitch": -15,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "out",
+                    "sceneId": "entrance2"
+                 },
+                 {
+                    "pitch": -30,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "room1",
+                    "sceneId": "circle"
+                 }
+            ]
+        },
+       "entrance2": {
+            "title": "entrance",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/p9eTZbm.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "room1",
+                    "sceneId": "entrance",
+                    "targetYaw": 190,
+                    "targetPitch": -15
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -15,
+                    "type": "scene",
+                    "text": "out",
+                    "sceneId": "out1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+           "out1": { //밖으로 나가기
+            "title": "out", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/eATadNq.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -30,
+                    "type": "scene",
+                    "text": "out",
+                    "sceneId": "out2" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "in",
+                    "sceneId": "entrance2" 
+                  
+                }   
+            ]
+        },
+        "out2": { //밖으로 나가기
+            "title": "미니스톱", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 0,
+            "yaw": -40,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/A0rBL1g.jpg ",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "out",
+                    "sceneId": "out3" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 230,
+                    "type": "scene",
+                    "text": "in",
+                    "sceneId": "out1" 
+                }   
+            ]
+        },
+          "out3": { //밖으로 나가기////////////
+            "title": "미니스톱", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 0,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/udDX28B.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "in",
+                    "sceneId": "out2" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 80,
+                    "type": "scene",
+                    "text": "MINI STOP",
+                    "sceneId": "out4" 
+                }   
+            ]
+        },
+        "out4": { //밖으로 나가기
+            "title": "미니스톱", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/gK433bW.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -100,
+                    "type": "scene",
+                    "text": "in",
+                    "sceneId": "out3" 
+                }
+            ]
+        }
+
+
+    }
+});
+</script>
+
+
+</body>
+</html>

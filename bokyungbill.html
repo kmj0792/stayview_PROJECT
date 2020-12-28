@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<title>보경빌라</title>
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+</head>
+<body>
+<center>
+<div id="panorama4" style="width:980px;height:460px"></div> 
+
+<script>
+
+// 아래 코드의 01.jpg 만 원하는 이미지로 교체한 후 URL
+
+
+var sImageFileName4 = "https://i.imgur.com/Hza0XBJ.jpg";
+pannellum.viewer('panorama4', {
+"type": "equirectangular",
+"panorama": sImageFileName4
+});
+
+
+</script>
+</center>
+</body>
+</html>

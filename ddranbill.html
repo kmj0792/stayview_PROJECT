@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뜨란빌라</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+
+        height: 460px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "living room",
+        "author": "S.P.C",
+        "sceneFadeDuration": 1000
+    },
+// 만약 버튼을 두개 이상 하고싶다면 hotspots []안에 배열처럼 {}추가하기 쉼표(,) 필수 
+    "scenes": {
+        "living room": {
+            "title": "living room", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/qHDsdlk.jpg",  //첫방 사진 링크 
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": -8,
+                    "type": "scene",
+                    "text": "aisle", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "aisle_1" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": -100,
+                    "type": "scene",
+                    "text": "living room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "living room2" // 이 버튼을 통해 이동할 다음방 이름 
+                }, 
+      {
+                    "pitch": -20,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "aisle", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "aisle_2" // 이 버튼을 통해 이동할 다음방 이름 
+                }, 
+            ]
+        },
+        "living room2": {
+            "title": "living room ",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/Hlpg0eJ.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 100,
+                    "type": "scene",
+                    //"text": "living room",
+                    "sceneId": "living room",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+
+        "room1": {
+            "title": "room1",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/p9pSob4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "aisle",
+                    "sceneId": "aisle_1"
+                 }
+            ]
+        },
+       "room2": {
+            "title": "room2",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/oHmkq87.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -15,
+                    "type": "scene",
+                    "text": "living room",
+                    "sceneId": "living room",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "room3": {
+            "title": "room3",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/I4PYwng.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 105,
+                    "type": "scene",
+                    "text": "living room",
+                    "sceneId": "living room",
+                    "targetYaw": 400,
+                    "targetPitch": 2
+                }
+            ]
+        },
+         "aisle_1": {
+            "title": "aisle_1",
+            "hfov": 0,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/og219Wr.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -163,
+                    "yaw": 100,
+                    "type": "scene",
+                    "text": "room3",
+                    "sceneId": "room3"               
+               },
+     {
+                    "pitch": -163,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "outside", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "outside" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+      {
+                    "pitch": 213,
+                    "yaw": -0.5,
+                    "type": "scene",
+                    "text": "living room", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "living room" // 이 버튼을 통해 이동할 다음방 이름 
+                } 
+            ]
+        },
+        "outside": {
+            "title": "outside",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/VMIUH3G.jpg",
+   "hotSpots": [
+                {
+                    "pitch": -163,
+                    "yaw": 170,
+                    "type": "scene",
+                    "text": "EDIYA",
+          "sceneId": "outside1"
+                          
+               },
+                {
+                    "pitch": -163,
+                    "yaw": -10,
+                    "type": "scene",
+                    "text": "IN",
+          "sceneId": "aisle_1"
+                          
+               }
+            ]  
+         },
+          "outside1": {
+            "title": "outside",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/TulTgPZ.jpg",
+   "hotSpots": [
+                {
+                    "pitch": -163,
+                    "yaw": 250,
+                    "type": "scene",
+                    "text": "IN",
+         "sceneId": "outside"
+               }
+            ]  
+         },
+          "aisle_2": {
+            "title": "aisle",
+            "hfov": 110,
+            "yaw": -100,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/eno4Hzv.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -95,
+                    "type": "scene",
+                    "text": "room1",
+                    "sceneId": "room1"               
+               },
+     {
+                    "pitch": -160,
+                    "yaw": -110,
+                    "type": "scene",
+                    "text": "room2", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "room2" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+      {
+                    "pitch": -173,
+                    "yaw": -180,
+                    "type": "scene",
+                    "text": "living room",
+                    "sceneId": "living room"               
+                 }
+            ]
+        }
+     }
+});
+</script>
+
+</body>
+</html>
